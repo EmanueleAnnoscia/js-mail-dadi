@@ -170,9 +170,28 @@ console.log(singleValue);
 
 // 📊 11. Conta quanti numeri sono maggiori della media
 // Obiettivo: Calcolare la media dei numeri, poi contare quanti sono sopra la media.
-// const numeri = [5, 10, 15, 20, 25];
+const numeri5 = [5, 10, 15, 20, 25];
 // // Media = 15 → Output atteso: 2 (20 e 25)
 
+let sum1 = 0;
+
+const printNum = [];
+
+for(i=0 ; i< numeri5.length; i++){
+    sum1 = sum1 + numeri5[i]
+    
+}
+console.log(sum1)
+
+let average= sum1 / numeri5.length;
+console.log(average)
+
+for(i=0; i<numeri5.length; i++){
+    if(numeri5[i]>average)
+    printNum.push(numeri5[i])
+}
+
+console.log(printNum)
 
 // 🧮 12. Somma delle cifre di un numero
 // Obiettivo: Sommare tutte le cifre di un numero (es: 472 → 4+7+2)
@@ -189,29 +208,98 @@ console.log(sum);
 
 // 🔢 13. Trova il secondo numero più grande
 // Obiettivo: Trovare il secondo valore più grande in un array.
-// const numeri = [10, 40, 30, 20];
-// // Output atteso: 30
+const numeri6 = [10, 40, 30, 20];
+// // Output atteso: 30 NON COMPLETATO CHIEDI CONSIGLIO 
+// const secondArray=[];
+// let max2 = numeri5[0];
+
+
+// for(let i = 0; i < numeri5.length; i++){
+//     let second = numeri5[1];
+//     if (numeri5[i]> max2){
+//         max2=numeri5[i];
+//         secondArray.push(second);
+//         if(second)
+//     })
+// }
+// console.log(secondArray)
+
+
 
 
 // 🧮 14. Conta la somma dei numeri dispari in un array misto
 // Obiettivo: Calcolare la somma solo dei numeri dispari in un array che contiene anche stringhe o altri tipi.
-// const dati = [3, "ciao", 4, true, 7, 2];
+const dati = [3, "ciao", 4, true, 7, 2];
 // // Output atteso: 10 (3 + 7)
+
+const numArray=[];
+
+for(i=0; i<dati.length; i++){
+    if(!isNaN(dati[i]) && typeof dati[i] === "number"){
+        numArray.push(dati[i]);
+    }
+}
+console.log(numArray);
+let even = 0;
+for(j=0; j<numArray.length; j++){
+  if(numArray[j] % 2 === 1)
+    even = even + numArray[j];  
+}
+console.log(even);
 
 
 // 🔤 15. Trova la parola più lunga in un array di stringhe
 // Obiettivo: Restituire la stringa più lunga da un array.
-// const parole = ["sole", "albero", "casa", "elefante"];
+const parole = ["sole", "albero", "casa", "elefante"];
 // // Output atteso: "elefante"
+let parolaLunga= parole[0];
+
+// let max3 = [parole[i].length];
+
+for (i=0; i< parole.length; i++){
+    if(parole[i].length>parolaLunga.length)
+        parolaLunga= parole[i];
+
+}
+console.log(parolaLunga)
 
 
 // 🔍 16. Verifica se un array è ordinato in modo crescente
 // Obiettivo: Controllare se i numeri sono in ordine crescente.
-// const numeri = [1, 2, 3, 4, 5]; // Output: true
-// const altri = [1, 3, 2]; // Output: false
+const numeri7 = [1, 2, 3, 4, 5]; // Output: true
+const altri = [1, 3, 2]; // Output: false
+
+for(i=0 ; i< numeri7.length-1; i++ ){
+    if (numeri7[i+1]>= numeri7[i]){
+        console.log(true)
+    }else if(numeri7[i+1] < numeri7[i]){
+        console.log(false);
+    }
+}
+
+
+for(j=0 ; j< altri.length-1; j++ ){
+    if (altri[j+1] >= altri[j]){
+        console.log(true);             // chiedi sulla stampa
+    }else if(altri[j+1] < altri[j]){
+        console.log(false);
+    }
+}
+
+
 
 
 // 🔢 17. Somma delle posizioni pari ma solo se il numero è dispari
 // Obiettivo: Sommare tutti i numeri che si trovano in posizione pari (0, 2, 4…) ma solo se il numero è dispari.
-// const arr = [1, 4, 3, 6, 5, 8]; 
+const arr1 = [1, 4, 3, 6, 5, 8]; 
 // // Posizioni pari: 1 (dispari), 3 (dispari), 5 (dispari) → Somma: 1 + 3 + 5 = 9
+
+let somma1= 0;
+
+
+for (i=0; i< arr1.length; i++){
+    if(i % 2 === 0 && arr1[i] % 2 === 1)
+        somma1 = somma1 + arr1[i];
+}
+
+console.log(somma1)
