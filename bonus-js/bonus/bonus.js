@@ -134,15 +134,39 @@ console.log(double)
 
 // 🔤 9. Conta le vocali in una parola
 // Obiettivo: Data una stringa, contare quante vocali contiene (a, e, i, o, u). PS: che cosa succede se qualche vocale è maiuscola? 😉
-// const parola = "elefante";
+const parola = "elefante";
 // // Output atteso: 4
 
 
+let vocals = 0;  
+
+for(let i=0 ; i<parola.length; i++){
+    const lettera = parola[i].toLowerCase();
+
+    if(lettera === "a" || lettera === "e"|| lettera === "i"|| lettera === "o"|| lettera === "u") {
+        vocals ++;
+    }
+    
+}
+console.log(vocals);
+
 // 🔄 10. Rimuovi i duplicati da un array (senza .filter o Set)
 // Obiettivo: Creare un nuovo array che contiene ogni valore una sola volta.
-// const input = [1, 2, 2, 3, 1, 4];
+const input2 = [1, 2, 2, 3, 1, 4];
 // // Output atteso: [1, 2, 3, 4]
 
+let singleValue=[];
+
+for (i=0; i< input2.length; i++){
+    single = input2[i];
+    singleValue.push(single)
+  for(j=0; j<singleValue.length; j++){
+    if(j === single){
+        singleValue.pop(single)
+    }
+  }  
+}
+console.log(singleValue);
 
 // 📊 11. Conta quanti numeri sono maggiori della media
 // Obiettivo: Calcolare la media dei numeri, poi contare quanti sono sopra la media.
