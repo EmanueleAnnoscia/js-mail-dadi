@@ -176,10 +176,16 @@ console.log(singleValue);
 
 // 🧮 12. Somma delle cifre di un numero
 // Obiettivo: Sommare tutte le cifre di un numero (es: 472 → 4+7+2)
-// const numero = 472;
+//appunti convertire sempre un numero in stringa poichè non si può eseguire ciclo for e ritrasformarlo per le operazioni
+const numero = 472;
 // // Output atteso: 13
+let sum = 0;
+const numeroStr= numero.toString();
 
-
+for(let i =0 ; i<numeroStr.length; i++){
+    sum = sum + parseInt(numeroStr[i]);
+}
+console.log(sum);
 
 // 🔢 13. Trova il secondo numero più grande
 // Obiettivo: Trovare il secondo valore più grande in un array.
