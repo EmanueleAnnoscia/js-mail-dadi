@@ -18,14 +18,14 @@ console.log(somma);
 const colori = ["rosso", "blu", "rosso", "verde", "rosso"];
 // // Output atteso: 3
 
-let redSum = 0;
+let redCount = 0;
 
 for(let i = 0; i< colori.length; i++ ){
     if(colori[i] === "rosso"){
-        redSum ++ ; 
+        redCount ++ ; 
     }
 }
-console.log(redSum);
+console.log(redCount);
 
 // 🔄 3. Inverti un array
 // Obiettivo: Creare un nuovo array con gli elementi in ordine inverso (senza usare .reverse()).
