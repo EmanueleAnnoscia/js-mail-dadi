@@ -158,7 +158,7 @@ const input2 = [1, 2, 2, 3, 1, 4];
 let singleValue=[];
 
 for (i=0; i< input2.length; i++){
-    single = input2[i];
+    let single = input2[i];
     singleValue.push(single)
   for(j=0; j<singleValue.length; j++){
     if(j === single){
@@ -167,6 +167,18 @@ for (i=0; i< input2.length; i++){
   }  
 }
 console.log(singleValue);
+
+
+// const input2 = [1, 2, 2, 3, 1, 4]; soluzione alternativa da studiare
+// let singleValue = [];
+
+// for (let i = 0; i < input2.length; i++) {
+//   if (!singleValue.includes(input2[i])) {
+//     singleValue.push(input2[i]);
+//   }
+// }
+
+// console.log(singleValue);
 
 // 📊 11. Conta quanti numeri sono maggiori della media
 // Obiettivo: Calcolare la media dei numeri, poi contare quanti sono sopra la media.
