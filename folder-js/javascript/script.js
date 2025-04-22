@@ -13,6 +13,7 @@
   for (let i = 0; i < accessMail.length && mailCheck === false ; i++) {
      if (accessMail[i] === mailUser) {
        mailCheck = true;
+       break;
      }
    }
 //   console.log(mailCheck); da attivare se si vuole vedere il true or false
